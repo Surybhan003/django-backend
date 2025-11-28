@@ -12,9 +12,10 @@ if st.button('Submit'):
         "email":email,
         "message":message 
     }
-    response=requests.post('http://127.0.0.1:8000//submit_form',json=data)
+    response = requests.post('https://django-backend-rtt7.onrender.com/submit_form', json=data)
 
     if response.status_code==200:
         st.success("Form submitted successfully")
     else:
+
         st.error("something went wrong")
